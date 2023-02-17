@@ -1,34 +1,34 @@
 # pip install tensorflow==2.10.0 tensorflow-hub==0.12.0 unidecode imblearn scikit-learn==1.0.1 sentence_transformers
 
-# import re
-# import boto3
-# import sagemaker
-# from sagemaker import get_execution_role
+import re
+import boto3
+import sagemaker
+from sagemaker import get_execution_role
 
-# sess = sagemaker.Session()
-# print('sess:', sess)
+sess = sagemaker.Session()
+print('sess:', sess)
 
-# region = boto3.Session().region_name
-# print('region:', region)
+region = boto3.Session().region_name
+print('region:', region)
 
-# bucket = sess.default_bucket()
-# print('bucket:', bucket)
+bucket = sess.default_bucket()
+print('bucket:', bucket)
 
-# role = get_execution_role()
-# print('role:', role)
-# # Load train dataframe from S3
-# import pandas as pd
-# import io
-# import boto3
+role = get_execution_role()
+print('role:', role)
+# Load train dataframe from S3
+import pandas as pd
+import io
+import boto3
 
-# bucket = 'bucket_name'
-# import pickle
-# # s3 = boto3.client('s3')
-# # response = s3.get_object(Bucket=bucket, Key='key_name')
-# # df = pickle.load(io.BytesIO(response['Body'].read()))
+bucket = 'bucket_name'
+import pickle
+# s3 = boto3.client('s3')
+# response = s3.get_object(Bucket=bucket, Key='key_name')
+# df = pickle.load(io.BytesIO(response['Body'].read()))
 
-# s3 = boto3.resource('s3')
-# df=pickle.loads(s3.Bucket(bucket).Object('key_name').get()['Body'].read())
+s3 = boto3.resource('s3')
+df=pickle.loads(s3.Bucket(bucket).Object('key_name').get()['Body'].read())
 
 import pandas as pd
 import numpy as np
@@ -384,7 +384,7 @@ import traceback
 import numpy as np
 
 event_flagnames=['flag_name']
-feature_name= 'e2b_narrative'
+feature_name= 'feature_name'
 train_valid_flag='train_valid_flag'
 identifier="identifier_v1"
 
