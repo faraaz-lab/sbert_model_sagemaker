@@ -253,8 +253,6 @@ def evaluate_model(y_test, y_pred):
 sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
-def append_event_verbatim(row):
-    return str(row['EVENT_VERBATIM']).lower()+" "+row['text']
     
 def train_oversampling_model_sbert(df1,train_valid_flag,feature_name ,event_flagname,identifier):
     
